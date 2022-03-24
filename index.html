@@ -2,22 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>WebDev | Home</title>
-
-    <link rel="stylesheet" href="css/main.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- Header -->
-    <header class="navbar">
+    <header class="navbar" id="navbar">
       <div class="container">
         <a href="index.html" class="navbar-brand">
           <img src="images/logo.svg" alt="WebDev logo" />
@@ -25,7 +20,7 @@
         <nav class="navbar-nav">
           <ul>
             <li>
-              <a href="index.html">Home</a>
+              <a href="#home">Home</a>
             </li>
             <li>
               <a href="#about">About</a>
@@ -41,9 +36,9 @@
     <main>
       <!-- Hero Section -->
       <section
-        id="home"
         class="hero"
         style="background-image: url('images/home/hero.jpeg')"
+        id="home"
       >
         <div class="container">
           <h1>We build stylish and robust websites</h1>
@@ -102,7 +97,7 @@
       </section>
 
       <!-- Split Section -->
-      <section id="about" class="section-padding section-grey">
+      <section class="section-padding section-grey">
         <div class="container">
           <div class="split-section">
             <div class="split-section__text">
@@ -130,6 +125,7 @@
       <section
         class="hero hero-sm"
         style="background-image: url('images/about/hero.jpeg')"
+        id="about"
       >
         <div class="container">
           <h1 class="mb-0">About Us</h1>
@@ -187,13 +183,14 @@
       <section
         class="hero hero-sm"
         style="background-image: url('images/contact/hero.jpeg')"
+        id="contact"
       >
         <div class="container">
           <h1 class="mb-0">Contact Us</h1>
         </div>
       </section>
 
-      <section id="contact" class="section-padding">
+      <section class="section-padding">
         <div class="container">
           <div class="contact-form">
             <div class="contact-form__form">
@@ -254,7 +251,7 @@
       <div class="container">
         <div class="footer-row">
           <small class="footer-copyright"
-            >© 2020 WebDev — All Rights Reserved</small
+            >© 2022 WebDev — All Rights Reserved</small
           >
           <ul class="footer-social">
             <li>
@@ -284,5 +281,24 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <scrtipt
+      var
+      prevScrollpos="window.pageYOffset;"
+      window.onscroll="function()"
+      {
+      var
+      currentScrollPos="window.pageYOffset;"
+      if
+      (prevScrollpos
+    >
+      currentScrollPos) { document.getElementById("navbar").style.top = "0"; }
+      else { document.getElementById("navbar").style.top = "-50px"; }
+      prevScrollpos = currentScrollPos; } >
+    </scrtipt>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
